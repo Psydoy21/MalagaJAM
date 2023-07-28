@@ -14,6 +14,12 @@ public class PlayerPlataformaScript : MonoBehaviour
     [SerializeField] private float maxVelocity;
     [HideInInspector] public float move;
 
+
+    private float tiempoEnElAire;
+    [SerializeField] private float AlturaMax;
+    private float numeroSaltos;
+    [SerializeField] private float velocidadSalto;
+
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -22,6 +28,7 @@ public class PlayerPlataformaScript : MonoBehaviour
     void Update()
     {
         movimientoHorizontal();
+        movimientoVertical();
     }
 
     private void movimientoHorizontal()
@@ -65,4 +72,41 @@ public class PlayerPlataformaScript : MonoBehaviour
             }
         }
     }
+    private void movimientoVertical()
+    {
+        RaycastHit2D raycastSueloL = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.left * 0.65f), Vector2.down, 1f, suelo);
+        RaycastHit2D raycastSueloR = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.right * 0.5f), Vector2.down, 1f, suelo);
+        Debug.DrawRay((transform.position + Vector3.left * 0.65f + Vector3.down * 0.5f), Vector3.down * 1f, Color.green);
+        Debug.DrawRay((transform.position + Vector3.right * 0.5f + Vector3.down * 0.5f), Vector3.down * 1f, Color.green);
+
+
+        if (Input.GetKey(KeyCode.Space) && tiempoEnElAire < AlturaMax && numeroSaltos < 1)
+        {
+            tiempoEnElAire = tiempoEnElAire + Time.deltaTime;
+            rb.velocity = new Vector2(rb.velocity.x, velocidadSalto);
+
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            numeroSaltos = numeroSaltos + 1f;
+        }
+
+
+
+        if ((raycastSueloL == false) && (raycastSueloR == false) && Input.GetKey(KeyCode.Space) == false)
+        {
+            numeroSaltos = numeroSaltos + 6f * Time.deltaTime;
+        }
+
+        if (raycastSueloL == true || raycastSueloR == true)
+        {
+            tiempoEnElAire = 0f;
+            numeroSaltos = 0f;
+        }
+
+
+    }
+
+
+
 }
