@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerPlataformaScript : MonoBehaviour
 {
    
-    [HideInInspector] public Rigidbody2D rb;
-    [SerializeField] public LayerMask suelo;
+    [HideInInspector]  Rigidbody2D rb;
+    [SerializeField]  LayerMask suelo;
+    [SerializeField] objetoInteractuable objetoInteractuable;
+    [SerializeField] GameObject coin;
 
     [HideInInspector] private float speed;
     [SerializeField] private float aceleration;
@@ -29,6 +31,7 @@ public class PlayerPlataformaScript : MonoBehaviour
     {
         movimientoHorizontal();
         movimientoVertical();
+        interactuar();
     }
 
     private void movimientoHorizontal()
@@ -106,7 +109,13 @@ public class PlayerPlataformaScript : MonoBehaviour
 
 
     }
-
+    public void interactuar()
+    {
+        if (objetoInteractuable.interactuable == true && Input.GetKeyDown(KeyCode.E) == true)
+        {
+            coin.SetActive(true);
+        }
+    }
 
 
 }
