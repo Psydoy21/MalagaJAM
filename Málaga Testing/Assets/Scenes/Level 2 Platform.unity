@@ -1126,10 +1126,10 @@ PrefabInstance:
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: coin
       value: 
-      objectReference: {fileID: 1532363820}
+      objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: AlturaMax
-      value: 0.35
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: aceleration
@@ -1145,12 +1145,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: velocidadSalto
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: objetoInteractuable
       value: 
-      objectReference: {fileID: 1755900335}
+      objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002657, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1170,6 +1170,14 @@ PrefabInstance:
     - target: {fileID: 2482153357133002661, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_GravityScale
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482153357133002662, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9975323
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482153357133002662, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.001233846
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_RootOrder
