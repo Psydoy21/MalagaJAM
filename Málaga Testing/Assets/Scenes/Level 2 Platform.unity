@@ -1518,6 +1518,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1532363820}
+    - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
+      propertyPath: objetoInteractuable
+      value: 
+      objectReference: {fileID: 1755900335}
     - target: {fileID: 2482153357133002657, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1525,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 2482153357133002660, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 380cf3880a844d84bb52ee476f3c30ca, type: 3}
+      objectReference: {fileID: -1765027186, guid: 01d5197ff3ee1be4dba34957664bd5d5, type: 3}
     - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_RootOrder
       value: 4

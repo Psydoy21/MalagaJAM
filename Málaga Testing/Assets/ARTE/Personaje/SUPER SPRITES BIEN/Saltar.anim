@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: parao
+  m_Name: Saltar
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,12 +19,10 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0.016666668
-      value: {fileID: 21300000, guid: 380cf3880a844d84bb52ee476f3c30ca, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: 78d0334c39fba9d4aa10f47bc0ad0103, type: 3}
-    - time: 0.5833333
-      value: {fileID: 21300000, guid: 380cf3880a844d84bb52ee476f3c30ca, type: 3}
+    - time: 0
+      value: {fileID: 1094004831, guid: 01d5197ff3ee1be4dba34957664bd5d5, type: 3}
+    - time: 0.16666667
+      value: {fileID: 1536181520, guid: 01d5197ff3ee1be4dba34957664bd5d5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,20 +42,19 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 380cf3880a844d84bb52ee476f3c30ca, type: 3}
-    - {fileID: 21300000, guid: 78d0334c39fba9d4aa10f47bc0ad0103, type: 3}
-    - {fileID: 21300000, guid: 380cf3880a844d84bb52ee476f3c30ca, type: 3}
+    - {fileID: 1094004831, guid: 01d5197ff3ee1be4dba34957664bd5d5, type: 3}
+    - {fileID: 1536181520, guid: 01d5197ff3ee1be4dba34957664bd5d5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.18333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
