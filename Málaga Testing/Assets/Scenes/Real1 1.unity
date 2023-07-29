@@ -437,7 +437,8 @@ MonoBehaviour:
   suelo:
     serializedVersion: 2
     m_Bits: 8
-  objeto: {fileID: 0}
+  objeto: {fileID: 1836311590}
+  spriteR: {fileID: 576656641}
   aceleration: 3.4
   deceleration: 9.33
   maxVelocity: 2.83
