@@ -184,5 +184,9 @@ public class PlayerPlataformaScript : MonoBehaviour
     {
         gameObject.transform.position = posicionInicial;
     }
+    public void puerta()
+    {
+        Animator.SetTrigger("puerta");
+    }
 
 }
