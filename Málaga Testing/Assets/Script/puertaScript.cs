@@ -22,6 +22,7 @@ public class puertaScript : MonoBehaviour
         {
             StartCoroutine(SceneLoad());
             PlayerPlataformaScript.bloquearElPersonaje();
+            PlayerPlataformaScript.puerta();
         }
     }
     public IEnumerator SceneLoad()
