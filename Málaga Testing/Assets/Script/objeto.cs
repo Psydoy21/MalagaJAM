@@ -20,10 +20,15 @@ public class objeto : MonoBehaviour
     public float type;
     public TextAsset textito;
     private int nextSceneIndex;
+    //animator del fade out/in
+    [SerializeField] private GameObject fade;
+    [HideInInspector] Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = fade.GetComponent<Animator>();
         if(textito!=null)
         {
             lineas = (textito.text.Split("\n"));
@@ -45,8 +50,7 @@ public class objeto : MonoBehaviour
             else if(isopen&& texto.text == lineas[linea])
             {
                 closedialogue();
-                nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-                SceneManager.LoadScene(nextSceneIndex);
+                StartCoroutine(SceneLoad());
 
             }
             else
@@ -106,5 +110,13 @@ public class objeto : MonoBehaviour
             charindex++;
             yield return new WaitForSecondsRealtime(type);
         }
+    }
+    public IEnumerator SceneLoad()
+    {
+
+        animator.SetTrigger("Start Transition");
+        yield return new WaitForSeconds(1f);
+        nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }
