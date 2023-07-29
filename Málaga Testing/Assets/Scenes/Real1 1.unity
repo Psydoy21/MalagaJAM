@@ -519,7 +519,7 @@ SpriteRenderer:
   m_Size: {x: 0.48, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &576656642
@@ -1130,6 +1130,7 @@ MonoBehaviour:
   indTexto: 0
   textitos:
   - {fileID: 4900000, guid: 4629638a3e18f5a49b7e1ba707fd2adf, type: 3}
+  gatillo: {fileID: 1836311592}
 --- !u!61 &1836311592
 BoxCollider2D:
   m_ObjectHideFlags: 0
