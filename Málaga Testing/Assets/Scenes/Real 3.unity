@@ -896,7 +896,7 @@ MonoBehaviour:
   longi: 0
   lineas: []
   type: 0.04
-  textito: {fileID: 4900000, guid: 4629638a3e18f5a49b7e1ba707fd2adf, type: 3}
+  textito: {fileID: 4900000, guid: 36cbf0c2a3cc3ac4488e643735ecab75, type: 3}
 --- !u!61 &1836311592
 BoxCollider2D:
   m_ObjectHideFlags: 0

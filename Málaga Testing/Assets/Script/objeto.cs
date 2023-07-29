@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Playables;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class objeto : MonoBehaviour
@@ -18,6 +19,7 @@ public class objeto : MonoBehaviour
     [SerializeField, TextArea(4, 6)] private string[] lineas;
     public float type;
     public TextAsset textito;
+    private int nextSceneIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,9 @@ public class objeto : MonoBehaviour
             else if(isopen&& texto.text == lineas[linea])
             {
                 closedialogue();
+                nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+                SceneManager.LoadScene(nextSceneIndex);
+
             }
             else
             {
