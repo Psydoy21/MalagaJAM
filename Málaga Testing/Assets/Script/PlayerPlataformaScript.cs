@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerPlataformaScript : MonoBehaviour
 {
-   
+    [Header("Componentes")]
     [HideInInspector]  Rigidbody2D rb;
     [SerializeField]  LayerMask suelo;
     [SerializeField] objetoInteractuable objetoInteractuable;
     [SerializeField] GameObject coin;
+
+    [Header("Movimiento Horizontal")]
 
     [HideInInspector] private float speed;
     [SerializeField] private float aceleration;
@@ -16,22 +18,33 @@ public class PlayerPlataformaScript : MonoBehaviour
     [SerializeField] private float maxVelocity;
     [HideInInspector] public float move;
 
+    [Header("Salto")]
 
     private float tiempoEnElAire;
     [SerializeField] private float AlturaMax;
     private float numeroSaltos;
     [SerializeField] private float velocidadSalto;
 
+    //---------------Valores booleans--------------
+    [HideInInspector] public bool objetoCogido = false;
+    
+
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-
+        
     }
     void Update()
     {
-        movimientoHorizontal();
-        movimientoVertical();
-        interactuar();
+        
+        
+            movimientoHorizontal();
+            movimientoVertical();
+            interactuar();
+        
+            
+        
+        
     }
 
     private void movimientoHorizontal()
@@ -115,8 +128,12 @@ public class PlayerPlataformaScript : MonoBehaviour
         {
             coin.SetActive(true);
             objetoInteractuable.desactivarObjeto();
+            objetoCogido = true;
         }
     }
 
-
+    public void bloquearElPersonaje()
+    {
+        rb.simulated = false;
+    }
 }
