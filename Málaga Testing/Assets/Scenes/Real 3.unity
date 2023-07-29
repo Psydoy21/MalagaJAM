@@ -896,7 +896,10 @@ MonoBehaviour:
   longi: 0
   lineas: []
   type: 0.04
-  textito: {fileID: 4900000, guid: 36cbf0c2a3cc3ac4488e643735ecab75, type: 3}
+  indTexto: 0
+  textitos:
+  - {fileID: 4900000, guid: a84d85e2fc62c1f46ba2e2fd02a57ec0, type: 3}
+  - {fileID: 4900000, guid: 36cbf0c2a3cc3ac4488e643735ecab75, type: 3}
 --- !u!61 &1836311592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1127,8 +1130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 880.4, y: 78.656}
+  m_AnchoredPosition: {x: 0.00012207, y: 0.0010376}
+  m_SizeDelta: {x: 1920, y: 767.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1985453955
 MonoBehaviour:

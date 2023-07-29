@@ -13,30 +13,36 @@ public class objeto : MonoBehaviour
     public bool inrange;
     public bool objetoc;
     private bool isopen;
+    private bool isopen2;
     [SerializeField] public GameObject exclamacion;
     [SerializeField] public int linea;
     public int longi;
     [SerializeField, TextArea(4, 6)] private string[] lineas;
     public float type;
-    public TextAsset textito;
+    public int indTexto;
+    public TextAsset [] textitos;
     private int nextSceneIndex;
     //animator del fade out/in
-    [SerializeField] private GameObject fade;
+    //[SerializeField] private GameObject fade;
     [HideInInspector] Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = fade.GetComponent<Animator>();
-        if(textito!=null)
+        //animator = fade.GetComponent<Animator>();
+        if(textitos!=null)
         {
-            lineas = (textito.text.Split("\n"));
+            lineas = (textitos[indTexto].text.Split("\n"));
         }
         longi = lineas.Length;
         inrange = false;
-        panel.SetActive(false);
+
         exclamacion.SetActive(false);
+        if(SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            StartDialogue();
+        }
     }
 
     // Update is called once per frame
@@ -50,7 +56,12 @@ public class objeto : MonoBehaviour
             else if(isopen&& texto.text == lineas[linea])
             {
                 closedialogue();
-                StartCoroutine(SceneLoad());
+                if(indTexto >= textitos.Length)
+                {
+                    Debug.Log("cerrardialogo");
+                    StartCoroutine(SceneLoad());
+                } 
+                
 
             }
             else
@@ -68,7 +79,6 @@ public class objeto : MonoBehaviour
     private void closedialogue()
     {
         panel.SetActive(false);
-        exclamacion.SetActive(true);
         Time.timeScale = 1f;
         isopen = false;
     }
@@ -90,6 +100,7 @@ public class objeto : MonoBehaviour
     }
     private void StartDialogue()
     {
+        indTexto++;
         isopen = true;
         panel.SetActive(true);
         exclamacion.SetActive(false);
@@ -114,7 +125,7 @@ public class objeto : MonoBehaviour
     public IEnumerator SceneLoad()
     {
 
-        animator.SetTrigger("Start Transition");
+        //animator.SetTrigger("Start Transition");
         yield return new WaitForSeconds(1f);
         nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
