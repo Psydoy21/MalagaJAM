@@ -29,12 +29,12 @@ public class PlayerPlataformaScript : MonoBehaviour
 
     //---------------Valores booleans--------------
     [HideInInspector] public bool objetoCogido = false;
-    
+    [HideInInspector] Vector3 posicionInicial;
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        
+        posicionInicial = transform.position;
     }
     void Update()
     {
@@ -180,4 +180,9 @@ public class PlayerPlataformaScript : MonoBehaviour
     {
         rb.simulated = false;
     }
+    public void deathPlane()
+    {
+        gameObject.transform.position = posicionInicial;
+    }
+
 }
