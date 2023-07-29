@@ -1075,80 +1075,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 2123105565}
-    - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: coin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1532363820}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: AlturaMax
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: aceleration
-      value: 30
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: maxVelocity
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: deceleration
-      value: 50
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: velocidadSalto
-      value: 15
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002656, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: objetoInteractuable
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1755900335}
     - target: {fileID: 2482153357133002657, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002660, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002661, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002661, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002661, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_GravityScale
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002662, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9975323
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002662, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.001233846
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1190,12 +1146,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2482153357133002663, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
 --- !u!1 &406987875
 GameObject:
@@ -21387,11 +21338,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!50 &2123105565 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2482153357133002661, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
-  m_PrefabInstance: {fileID: 301903522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2123105567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
