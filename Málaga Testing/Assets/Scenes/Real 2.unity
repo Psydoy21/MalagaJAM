@@ -207,6 +207,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &457336531 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2553048024033785791, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
+  m_PrefabInstance: {fileID: 2553048023468139198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &522652161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jug
       objectReference: {fileID: 0}
+    - target: {fileID: 2553048024033785409, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
+      propertyPath: spriteR
+      value: 
+      objectReference: {fileID: 457336531}
     - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
       propertyPath: m_RootOrder
       value: 5

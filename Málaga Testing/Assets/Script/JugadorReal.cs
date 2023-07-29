@@ -8,6 +8,7 @@ public class JugadorReal : MonoBehaviour
     [HideInInspector]  Rigidbody2D rb;
     [SerializeField]  LayerMask suelo;
     [SerializeField] GameObject objeto;
+    [SerializeField] SpriteRenderer spriteR;
 
     [HideInInspector] private float speed;
     [SerializeField] private float aceleration;
@@ -30,6 +31,7 @@ public class JugadorReal : MonoBehaviour
     }
     void Update()
     {
+        flipx();
         movimientoHorizontal();
         if(Mathf.Abs(move)>0)
         {
