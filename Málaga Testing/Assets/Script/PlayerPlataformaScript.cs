@@ -114,6 +114,7 @@ public class PlayerPlataformaScript : MonoBehaviour
         if (objetoInteractuable.interactuable == true && Input.GetKeyDown(KeyCode.E) == true)
         {
             coin.SetActive(true);
+            objetoInteractuable.desactivarObjeto();
         }
     }
 
