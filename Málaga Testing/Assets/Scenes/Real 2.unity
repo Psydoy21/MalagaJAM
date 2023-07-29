@@ -718,7 +718,7 @@ MonoBehaviour:
   longi: 0
   lineas: []
   type: 0.04
-  textito: {fileID: 4900000, guid: 4629638a3e18f5a49b7e1ba707fd2adf, type: 3}
+  textito: {fileID: 4900000, guid: b3433bfc12ce0d14b93eaf81948934b0, type: 3}
 --- !u!61 &1836311592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1078,12 +1078,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.66
+      value: -8.13
       objectReference: {fileID: 0}
     - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1116,6 +1124,14 @@ PrefabInstance:
     - target: {fileID: 2553048024033785788, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553048024033785790, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2553048024033785790, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
+      propertyPath: m_Size.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a3bc79996376a4bb61181ab9f591b9, type: 3}
