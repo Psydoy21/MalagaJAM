@@ -7,6 +7,7 @@ public class objetoInteractuable : MonoBehaviour
     [SerializeField] GameObject interactBubble;
 
     [HideInInspector] public bool interactuable = false;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision)
