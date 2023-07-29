@@ -23,4 +23,8 @@ public class objetoInteractuable : MonoBehaviour
             interactuable = false;
         }
     }
+    public void desactivarObjeto()
+    {
+        gameObject.SetActive(false);
+    }
 }
