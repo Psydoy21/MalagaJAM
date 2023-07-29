@@ -5278,6 +5278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2482153357133002660, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 380c63867108fd445bb1260591991d04, type: 3}
     - target: {fileID: 2482153357133002667, guid: f0b844e86d85b0742b3aa2b0a6ebc296, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6982,26 +6986,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1369907003}
-  - component: {fileID: 1369907002}
   m_Layer: 0
   m_Name: SceneLoadManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1369907002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369907001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3821b14bacae95f42bbdc2399cd4a089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 0
 --- !u!4 &1369907003
 Transform:
   m_ObjectHideFlags: 0
@@ -8257,7 +8248,7 @@ Animator:
   m_GameObject: {fileID: 2029148808}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80193aeb12156a94591a43341189b6f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
