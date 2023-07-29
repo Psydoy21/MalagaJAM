@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu de inicio.unity
     guid: 6e90d0c81ce81e3479846c5e307c8b7a
   - enabled: 1
+    path: Assets/Scenes/Real1 1.unity
+    guid: 3874b0ffb58bc464d9c3037778d7d3d0
+  - enabled: 1
     path: Assets/Scenes/Level 1 Platform.unity
     guid: 4ef6c43bdb2d529488e37dbfee1b96f7
+  - enabled: 1
+    path: Assets/Scenes/Real 2.unity
+    guid: cd4ddcce5430d3a48bbf77cd08ddceca
+  - enabled: 1
+    path: Assets/Scenes/Level 2 Platform.unity
+    guid: fdd301881aea605488c6832ba22b4c16
+  - enabled: 1
+    path: Assets/Scenes/Real 3.unity
+    guid: b338bf3e40aa5a2418950b1adf5a9e59
   - enabled: 1
     path: Assets/Scenes/Level 3 Platform.unity
     guid: e7756e6a547bb854598f25d6dc78c267
