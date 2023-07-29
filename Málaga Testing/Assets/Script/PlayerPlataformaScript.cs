@@ -18,7 +18,7 @@ public class PlayerPlataformaScript : MonoBehaviour
     [SerializeField] private float aceleration;
     [SerializeField] private float deceleration;
     [SerializeField] private float maxVelocity;
-    [HideInInspector] public float move;
+    [SerializeField] public float move;
 
     [Header("Salto")]
 
@@ -93,10 +93,10 @@ public class PlayerPlataformaScript : MonoBehaviour
     }
     private void movimientoVertical()
     {
-        RaycastHit2D raycastSueloL = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.left * 0.65f), Vector2.down, 1f, suelo);
-        RaycastHit2D raycastSueloR = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.right * 0.5f), Vector2.down, 1f, suelo);
-        Debug.DrawRay((transform.position + Vector3.left * 0.65f + Vector3.down * 0.5f), Vector3.down * 1f, Color.green);
-        Debug.DrawRay((transform.position + Vector3.right * 0.5f + Vector3.down * 0.5f), Vector3.down * 1f, Color.green);
+        RaycastHit2D raycastSueloL = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.left * 0.3f), Vector2.down, 0.7f, suelo);
+        RaycastHit2D raycastSueloR = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.right * 0.3f), Vector2.down, 0.7f, suelo);
+        Debug.DrawRay((transform.position + Vector3.left * 0.3f + Vector3.down * 0.5f), Vector3.down * 0.7f, Color.green);
+        Debug.DrawRay((transform.position + Vector3.right * 0.3f + Vector3.down * 0.5f), Vector3.down * 0.7f, Color.green);
 
 
         if (Input.GetKey(KeyCode.Space) && tiempoEnElAire < AlturaMax && numeroSaltos < 1)
