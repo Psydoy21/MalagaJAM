@@ -20,19 +20,30 @@ public class JugadorReal : MonoBehaviour
     [SerializeField] private float AlturaMax;
     private float numeroSaltos;
     [SerializeField] private float velocidadSalto;
+    private Animator animator;
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
     }
     void Update()
     {
         movimientoHorizontal();
+        if(Mathf.Abs(move)>0)
+        {
+            animator.SetBool("andar", true);
+        }
+        else
+        {
+            animator.SetBool("andar", false);
+        }
     }
 
     private void movimientoHorizontal()
     {
+       
         move = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(speed, rb.velocity.y);
         if (move == 0)
