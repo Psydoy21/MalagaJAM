@@ -109,6 +109,13 @@ public class objeto : MonoBehaviour
         StartCoroutine(Showline());
 
     }
+    void cambioDeTexto()
+    {
+        if (textitos != null)
+        {
+            lineas = (textitos[indTexto].text.Split("\n"));
+        }
+    }
 
     private IEnumerator Showline()
     {
