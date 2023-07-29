@@ -9,6 +9,8 @@ public class PlayerPlataformaScript : MonoBehaviour
     [SerializeField]  LayerMask suelo;
     [SerializeField] objetoInteractuable objetoInteractuable;
     [SerializeField] GameObject coin;
+    [SerializeField] Animator Animator;
+    [SerializeField] SpriteRenderer spriteR;
 
     [Header("Movimiento Horizontal")]
 
@@ -38,10 +40,11 @@ public class PlayerPlataformaScript : MonoBehaviour
     {
         
         
-            movimientoHorizontal();
-            movimientoVertical();
-            interactuar();
-        
+        movimientoHorizontal();
+        movimientoVertical();
+        interactuar();
+        animationControler();
+        flipx();
             
         
         
@@ -131,7 +134,48 @@ public class PlayerPlataformaScript : MonoBehaviour
             objetoCogido = true;
         }
     }
+    private void animationControler()
+    {
+        RaycastHit2D raycastSueloL = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.left * 0.65f), Vector2.down, 1f, suelo);
+        RaycastHit2D raycastSueloR = Physics2D.Raycast((transform.position + Vector3.down * 0.5f + Vector3.right * 0.5f), Vector2.down, 1f, suelo);
 
+        if (move == 0)
+        {
+            Animator.SetBool("moving", false);
+
+        }
+        else
+        {
+            Animator.SetBool("moving", true);
+        }
+        if (rb.velocity.y < 0)
+        {
+            Animator.SetBool("falling", true);
+            Animator.SetBool("jumping", false);
+        }
+        if (rb.velocity.y > 0)
+        {
+            Animator.SetBool("falling", false);
+            Animator.SetBool("jumping", true);
+        }
+        if (raycastSueloL || raycastSueloR)
+        {
+            Animator.SetBool("falling", false);
+            Animator.SetBool("jumping", false);
+        }
+        
+    }
+    private void flipx()
+    {
+        if (rb.velocity.x < -0.1)
+        {
+            spriteR.flipX = true;
+        }
+        if (rb.velocity.x > 0.1)
+        {
+            spriteR.flipX = false;
+        }
+    }
     public void bloquearElPersonaje()
     {
         rb.simulated = false;
