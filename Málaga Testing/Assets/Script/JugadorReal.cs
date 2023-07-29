@@ -124,6 +124,16 @@ public class JugadorReal : MonoBehaviour
             objeto.SetActive(true);
         }
     }
-
+    private void flipx()
+    {
+        if (rb.velocity.x < -0.1)
+        {
+            spriteR.flipX = true;
+        }
+        if (rb.velocity.x > 0.1)
+        {
+            spriteR.flipX = false;
+        }
+    }
 
 }
