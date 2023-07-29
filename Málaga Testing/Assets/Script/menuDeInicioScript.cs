@@ -19,4 +19,8 @@ public class menuDeInicioScript : MonoBehaviour
     {
         Application.Quit();
     }
+    public void creditos()
+    {
+        SceneManager.LoadScene("Créditos");
+    }
 }
