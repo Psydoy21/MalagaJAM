@@ -1131,6 +1131,7 @@ MonoBehaviour:
   indTexto: 0
   textitos:
   - {fileID: 4900000, guid: 4629638a3e18f5a49b7e1ba707fd2adf, type: 3}
+  gatillo: {fileID: 1836311592}
 --- !u!61 &1836311592
 BoxCollider2D:
   m_ObjectHideFlags: 0

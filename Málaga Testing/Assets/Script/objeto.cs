@@ -13,7 +13,6 @@ public class objeto : MonoBehaviour
     public bool inrange;
     public bool objetoc;
     private bool isopen;
-    private bool isopen2;
     [SerializeField] public GameObject exclamacion;
     [SerializeField] public int linea;
     public int longi;
@@ -22,6 +21,8 @@ public class objeto : MonoBehaviour
     public int indTexto;
     public TextAsset [] textitos;
     private int nextSceneIndex;
+    public Collider2D gatillo;
+    public int contador;
     //animator del fade out/in
     //[SerializeField] private GameObject fade;
     [HideInInspector] Animator animator;
@@ -30,6 +31,8 @@ public class objeto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        indTexto = 0;
+        contador = 0;
         //animator = fade.GetComponent<Animator>();
         if(textitos!=null)
         {
@@ -48,7 +51,8 @@ public class objeto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+       
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if(inrange&&!isopen) {
                 StartDialogue();
@@ -56,13 +60,11 @@ public class objeto : MonoBehaviour
             else if(isopen&& texto.text == lineas[linea])
             {
                 closedialogue();
-                if(indTexto >= textitos.Length)
+                if((indTexto >= textitos.Length) || (contador==2))
                 {
                     Debug.Log("cerrardialogo");
                     StartCoroutine(SceneLoad());
                 } 
-                
-
             }
             else
             {
@@ -81,6 +83,15 @@ public class objeto : MonoBehaviour
         panel.SetActive(false);
         Time.timeScale = 1f;
         isopen = false;
+        cambiartext();
+    }
+    private void cambiartext()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            lineas = (textitos[indTexto].text.Split("\n"));
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -100,14 +111,19 @@ public class objeto : MonoBehaviour
     }
     private void StartDialogue()
     {
-        indTexto++;
+        if(indTexto<1)
+        {
+            indTexto++;
+        }
+        
+        Debug.Log("aumenta el indice");
         isopen = true;
         panel.SetActive(true);
         exclamacion.SetActive(false);
         linea = 0;
         Time.timeScale = 0f;
         StartCoroutine(Showline());
-
+        contador++;
     }
     void cambioDeTexto()
     {
@@ -131,7 +147,6 @@ public class objeto : MonoBehaviour
     }
     public IEnumerator SceneLoad()
     {
-
         //animator.SetTrigger("Start Transition");
         yield return new WaitForSeconds(1f);
         nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
