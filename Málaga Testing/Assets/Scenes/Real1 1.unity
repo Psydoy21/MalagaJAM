@@ -1127,8 +1127,9 @@ MonoBehaviour:
   longi: 0
   lineas: []
   type: 0.04
-  textito: {fileID: 4900000, guid: 4629638a3e18f5a49b7e1ba707fd2adf, type: 3}
-  fade: {fileID: 1018487651}
+  indTexto: 0
+  textitos:
+  - {fileID: 4900000, guid: 4629638a3e18f5a49b7e1ba707fd2adf, type: 3}
 --- !u!61 &1836311592
 BoxCollider2D:
   m_ObjectHideFlags: 0
