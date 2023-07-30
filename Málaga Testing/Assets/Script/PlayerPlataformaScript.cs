@@ -36,7 +36,7 @@ public class PlayerPlataformaScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         posicionInicial = transform.position;
     }
-    void Update()
+    void FixedUpdate()
     {
         
         
