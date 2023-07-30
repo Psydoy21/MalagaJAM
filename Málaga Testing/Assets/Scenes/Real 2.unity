@@ -1084,7 +1084,7 @@ MonoBehaviour:
   type: 0.04
   indTexto: 0
   textitos:
-  - {fileID: 4900000, guid: 2c2f87402c5d2ae448279c1de8f7f2f1, type: 3}
+  - {fileID: 4900000, guid: 565f52c9b3b84ff4da1cd93298b1b045, type: 3}
   - {fileID: 4900000, guid: b3433bfc12ce0d14b93eaf81948934b0, type: 3}
   gatillo: {fileID: 1836311592}
   contador: 0
