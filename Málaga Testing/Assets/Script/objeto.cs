@@ -56,6 +56,7 @@ public class objeto : MonoBehaviour
         {
             if(inrange&&!isopen) {
                 StartDialogue();
+                inrange = false;
             }
             else if(isopen&& texto.text == lineas[linea])
             {
