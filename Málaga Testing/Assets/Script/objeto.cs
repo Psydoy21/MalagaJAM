@@ -24,7 +24,7 @@ public class objeto : MonoBehaviour
     public Collider2D gatillo;
     public int contador;
     //animator del fade out/in
-    //[SerializeField] private GameObject fade;
+    [SerializeField] private GameObject fade;
     [HideInInspector] Animator animator;
 
 
@@ -33,7 +33,7 @@ public class objeto : MonoBehaviour
     {
         indTexto = 0;
         contador = 0;
-        //animator = fade.GetComponent<Animator>();
+        animator = fade.GetComponent<Animator>();
         if(textitos!=null)
         {
             lineas = (textitos[indTexto].text.Split("\n"));
@@ -147,7 +147,7 @@ public class objeto : MonoBehaviour
     }
     public IEnumerator SceneLoad()
     {
-        //animator.SetTrigger("Start Transition");
+        animator.SetTrigger("Start Transition");
         yield return new WaitForSeconds(1f);
         nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
