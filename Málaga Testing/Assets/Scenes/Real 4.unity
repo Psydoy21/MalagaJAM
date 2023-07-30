@@ -255,7 +255,7 @@ MonoBehaviour:
   type: 0
   indTexto: 0
   textitos:
-  - {fileID: 4900000, guid: 40b8801a1dc97f847abfe06aa8ce756f, type: 3}
+  - {fileID: 4900000, guid: 2e104576ca363194280f0a9395a6f0aa, type: 3}
   longi: 0
   velocidadCoche: 2
 --- !u!61 &375217263
