@@ -71,10 +71,10 @@ public class cocheScript : MonoBehaviour
     }
     private void StartDialogue()
     {
-        if (indTexto < 1)
-        {
-            indTexto++;
-        }
+        //if (indTexto < 1)
+        //{
+        //    indTexto++;
+       // }
 
         Debug.Log("aumenta el indice");
         isopen = true;
