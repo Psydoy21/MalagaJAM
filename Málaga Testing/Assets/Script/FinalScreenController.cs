@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalScreenController : MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class FinalScreenController : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            animator.SetTrigger("Start Long Transition");
+            StartCoroutine(LongTransition());
         }
+    }
+    IEnumerator LongTransition()
+    {
+        animator.SetTrigger("Start Long Transition");
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene("Menu de inicio");
     }
 
 }
